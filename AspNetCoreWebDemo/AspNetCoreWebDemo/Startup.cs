@@ -35,10 +35,10 @@ namespace AspNetCoreWebDemo
 
             app.Run(async (context) =>
             {
-                string showContent = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
-                showContent += Environment.NewLine+ _config["MyKey"];
+                string showContent = "Hello World!";
+                showContent += Environment.NewLine + System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+                showContent += Environment.NewLine + _config["MyKey"];
 
-                //await context.Response.WriteAsync("Hello World!");
                 await context.Response.WriteAsync(showContent);
             });
         }
