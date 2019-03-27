@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreWebDemo", "AspNetCoreWebDemo\AspNetCoreWebDemo.csproj", "{20EBE40B-3410-4788-94EA-7FF315039548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreWebDemo_MVC", "AspNetCoreWebDemo_MVC\AspNetCoreWebDemo_MVC.csproj", "{0F3CC8D8-7F26-45A5-8588-6ABB7A6E84A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{20EBE40B-3410-4788-94EA-7FF315039548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20EBE40B-3410-4788-94EA-7FF315039548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20EBE40B-3410-4788-94EA-7FF315039548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3CC8D8-7F26-45A5-8588-6ABB7A6E84A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3CC8D8-7F26-45A5-8588-6ABB7A6E84A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3CC8D8-7F26-45A5-8588-6ABB7A6E84A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3CC8D8-7F26-45A5-8588-6ABB7A6E84A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
