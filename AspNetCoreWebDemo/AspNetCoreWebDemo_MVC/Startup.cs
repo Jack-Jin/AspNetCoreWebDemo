@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreWebDemo_MVC.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,8 +16,19 @@ namespace AspNetCoreWebDemo_MVC
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddXmlSerializerFormatters();
+            //services.AddMvc()
             //services.AddMvcCore();
+
+            /* **************************************************************************************************************
+             * Singleton objects are the same for every object and every request.
+             * Transient objects are always different; a new instance is provided to every controller and every service. 
+             * Scoped objects are the same within a request, but different across different requests. 
+             ****************************************************************************************************************/
+            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            //services.AddTransient<IEmployeeRepository, MockEmployeeRepository>();
+            //services.AddScoped<IEmployeeRepository, MockEmployeeRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
