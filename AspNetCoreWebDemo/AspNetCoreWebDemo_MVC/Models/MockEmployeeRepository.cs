@@ -23,5 +23,10 @@ namespace AspNetCoreWebDemo_MVC.Models
         {
             return _EmployeeList.FirstOrDefault(e => e.Id == id);
         }
+
+        public List<Employee> GetEmployeeList()
+        {
+            return _EmployeeList;
+        }
     }
 }

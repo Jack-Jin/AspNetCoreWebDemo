@@ -8,5 +8,6 @@ namespace AspNetCoreWebDemo_MVC.Models
     public interface IEmployeeRepository
     {
         Employee GetEmployee(int id);
+        List<Employee> GetEmployeeList();
     }
 }

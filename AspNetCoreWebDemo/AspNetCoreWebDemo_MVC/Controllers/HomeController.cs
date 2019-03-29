@@ -113,6 +113,13 @@ namespace AspNetCoreWebDemo_MVC.Controllers
             _EmployeeRepository = employeeRepository;
         }
 
+        public ViewResult Index()
+        {
+            List<Employee> list = _EmployeeRepository.GetEmployeeList();
+
+            return View(list);
+        }
+
         public ViewResult Details1()
         {
             HomeDetails1ViewModel homeDetails1ViewModel = new HomeDetails1ViewModel()

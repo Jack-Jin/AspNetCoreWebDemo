@@ -1,16 +1,13 @@
 ﻿@model AspNetCoreWebDemo_MVC.Models.Employee
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Employee Details";
+
+    var emp = ViewData["Employee"] as AspNetCoreWebDemo_MVC.Models.Employee;
+}
+
     <h3>@ViewBag.PageTitle</h3>
-    @{ 
-        var emp = ViewData["Employee"] as AspNetCoreWebDemo_MVC.Models.Employee;
-    }
 
     <div>Name: @emp.Name</div>
     <div>Email: @Model.Email</div>
     <div>Department: @ViewBag.Employee.Department</div>
-</body>
-</html>
