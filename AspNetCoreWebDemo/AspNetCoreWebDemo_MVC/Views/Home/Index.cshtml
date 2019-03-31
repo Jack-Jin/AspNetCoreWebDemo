@@ -1,24 +1,23 @@
 ﻿@model List<Employee>
-@{ 
+@{
     ViewBag.Title = "Employee List";
 }
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Department</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var emp in Model)
-            {
-                <tr>
-                    <td>@emp.Name</td>
-                    <td>@emp.Email</td>
-                    <td>@emp.Department</td>
-                </tr>
-            }
-        </tbody>
 
-    </table>
+<div class="card-deck">
+    @foreach (var emp in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@emp.Name</h3>
+            </div>
+
+            <img class="card-img-top" src="~/images/peoperphoto.jpg" asp-append-version="true" />
+
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="details1" asp-route-id="@emp.Id" class="btn btn-primary">View</a>
+                <a asp-controller="home" asp-action="details1" asp-route-id="@emp.Id" class="btn btn-primary">Edit</a>
+                <a asp-controller="home" asp-action="details1" asp-route-id="@emp.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    }
+</div>

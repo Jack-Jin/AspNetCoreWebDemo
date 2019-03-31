@@ -40,7 +40,18 @@ namespace AspNetCoreWebDemo_MVC
             }
 
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+
+            /* Default setting MVC route setting */ 
+            //app.UseMvcWithDefaultRoute();
+
+            /* For Conventional routes setting */
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "vv/{controller=Home}/{action=Index}/{id?}");
+            });
+
+            /* For attribute routes settings */
+            //app.UseMvc(); 
 
             app.Run(async (context) =>
             {
